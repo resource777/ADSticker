@@ -1,0 +1,13 @@
+{
+    "manifest_version": 3,
+    "name": "YouTube Alert",
+    "version": "1.0",
+    "description": "Adds an alert symbol to YouTube video titles.",
+    "permissions": ["activeTab"],
+    "content_scripts": [
+      {
+        "matches": ["https://www.youtube.com/*"],
+        "js": ["content.js"]
+      }
+    ]
+}
