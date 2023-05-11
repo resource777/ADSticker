@@ -1,0 +1,48 @@
+{
+    "manifest_version": 3,
+    "name": "ADSticker",
+    "version": "1.0",
+    "description": "Ad detection and Ad summary",
+    "author": "LEEMIK",
+    "action": {
+        "default_title": "Settings",
+        "default_popup": "options.html"
+    },
+    "options_ui": {
+        "page": "options.html",
+        "browser_style": false
+    },
+    "background": {
+        "service_worker": "background.js"
+    },
+    "content_scripts": [
+      {
+        "matches": [
+          "*://*.youtube.com/*"
+        ],
+        "js": [
+          "lib/jquery-3.6.1.min.js",
+          "content-script.js"
+        ],
+        "run_at": "document_end"
+      }
+    ],
+    "permissions": [
+      "scripting",
+      "storage"
+    ],
+    "host_permissions": [
+      "*://*.youtube.com/*"
+    ],
+    "web_accessible_resources": [{
+      "resources": [
+        "css/bar-tooltip.css",
+        "css/bar-top-tooltip.css",
+        "css/bar-top.css",
+        "css/bar.css",
+        "css/bar-video-page.css"
+      ],
+      "matches": [],
+      "extension_ids": []
+    }]
+}

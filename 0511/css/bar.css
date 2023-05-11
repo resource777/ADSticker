@@ -1,0 +1,58 @@
+:root {
+  --ytrb-bar-height: 30px;
+  --ytrb-bar-opacity: 0.6;
+}
+
+ytrb-bar {
+  display: block;
+  position: absolute;
+  width: 20%;
+  z-index: 999;
+  transition: opacity 0.2s ease-out 0.2s;
+  opacity: var(--ytrb-bar-opacity);
+}
+
+ytrb-default {
+  display: flex;
+  height: var(--ytrb-bar-height);
+  background-color: #b2ffd9;
+  border-radius: 12px 0px 0px 12px;
+  position: relative;
+  font-weight: bold;
+  color: white;
+  align-items: center;
+  font-size: 16px;
+}
+
+ytrb-default::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: -15px;
+  border-top: 15px solid transparent;
+  border-bottom: 15px solid transparent;
+  border-left: 15px solid #b2ffd9;
+  z-index: 1;
+}
+
+#thumbnail-container {
+  position: relative;
+}
+
+ytg-thumbnail .ytrb-bar {
+  z-index: 1;
+}
+
+ytm-app a.media-item-thumbnail-container, ytm-app a.compact-media-item-image {
+  position: relative;
+}
+
+ytm-app ytrb-bar {
+  z-index: auto;
+}
+
+ytm-media-item ytrb-bar {
+  margin-left: -12px;
+  margin-right: -12px;
+  width: calc(100% + 24px);
+}

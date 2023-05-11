@@ -1,0 +1,64 @@
+ytrb-tooltip {
+  display: flex;
+  justify-content: center;
+}
+
+ytrb-tooltip > div {
+  position: absolute;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 300px;
+  padding: 8px;
+  color: #fff;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 18px;
+  background-color: #616161;
+  border-radius: 2px;
+  font-family: 'Roboto', 'Noto', sans-serif;
+  text-align: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.2s ease-out 0.2s;
+}
+
+ytrb-bar:hover {
+  opacity: 1 !important;
+}
+
+ytrb-bar:hover ytrb-tooltip > div {
+  visibility: visible;
+  opacity: 0.9 !important;
+}
+
+.video-extras-sparkbars {
+  overflow: auto;
+}
+
+ytrb-classic-tooltip {
+  position: absolute;
+  bottom: 8px;
+  right: 0;
+  padding: 8px;
+  white-space: nowrap;
+  color: #fff;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 18px;
+  background-color: #616161;
+  border-radius: 2px;
+  font-family: 'Roboto', 'Noto', sans-serif;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.2s ease-out 0.2s;
+}
+
+.video-extras-sparkbars:hover ytrb-classic-tooltip {
+  visibility: visible;
+  opacity: 0.9;
+}
+
+.ytd-sentiment-bar-renderer {
+  white-space: nowrap;
+}
